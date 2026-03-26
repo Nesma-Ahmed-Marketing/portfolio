@@ -2,4 +2,3 @@
 # Nesma Ahmed — Portfolio
 Social Media Specialist & SEO Content Creator Portfolio — UAE Market
 
-🌐 Live site: https://nesma-ahmed-marketing.github.io/portfolio
