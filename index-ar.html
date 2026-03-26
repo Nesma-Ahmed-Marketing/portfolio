@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نسمة أحمد | خبيرة محتوى وسيو</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: #D4AF37; --dark: #050505; --glass: rgba(255,255,255,0.03); }
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body { background: var(--dark); color: #fff; font-family: 'Cairo', sans-serif; }
+        nav { position: fixed; top: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 1000px; background: rgba(10,10,10,0.8); backdrop-filter: blur(15px); border: 1px solid rgba(212,175,55,0.3); border-radius: 50px; display: flex; justify-content: space-between; align-items: center; padding: 10px 30px; z-index: 1000; }
+        .logo { font-weight: 900; color: var(--gold); font-size: 1.4rem; }
+        nav ul { display: flex; list-style: none; gap: 20px; align-items: center; }
+        nav a { color: #fff; text-decoration: none; font-size: 0.9rem; }
+        .lang-btn { border: 1px solid var(--gold); padding: 5px 15px; border-radius: 20px; color: var(--gold) !important; font-weight: bold; }
+        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: radial-gradient(circle at center, #1a1505 0%, #050505 100%); padding: 20px; }
+        .profile-img { width: 180px; height: 180px; border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; border: 2px solid var(--gold); margin-bottom: 25px; object-fit: cover; }
+        .stats { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; padding: 40px; background: rgba(212, 175, 55, 0.05); }
+        .stat-item { text-align: center; }
+        .stat-item h3 { font-size: 2.5rem; color: var(--gold); }
+        .container { max-width: 1100px; margin: auto; padding: 60px 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card { background: var(--glass); padding: 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); transition: 0.3s; }
+        .card:hover { border-color: var(--gold); transform: translateY(-5px); }
+        .btn-gold { padding: 15px 40px; background: var(--gold); color: #000; border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 20px; display: inline-block; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">NESMA.A</div>
+        <ul>
+            <li><a href="#about">عني</a></li>
+            <li><a href="#services">خدماتي</a></li>
+            <li><a href="index-en.html" class="lang-btn">English</a></li>
+        </ul>
+    </nav>
+    <section class="hero">
+        <img src="profile.jpg" alt="نسمة أحمد" class="profile-img">
+        <h1 style="font-size: 3rem;">نسمة <span style="color:var(--gold)">أحمد</span></h1>
+        <p>خبير محتوى رقمي وسيو | خلفية هندسية دقيقة</p>
+        <a href="mailto:nesmaahmed0111@gmail.com" class="btn-gold">تواصل معي</a>
+    </section>
+    <div class="stats">
+        <div class="stat-item"><h3>+4</h3><p>سنوات خبرة</p></div>
+        <div class="stat-item"><h3>+100</h3><p>مقال سيو</p></div>
+        <div class="stat-item"><h3>100%</h3><p>محتوى بشري</p></div>
+    </div>
+    <div class="container" id="services">
+        <h2 style="text-align: center; color: var(--gold); margin-bottom: 40px;">الاعتمادات والخبرات</h2>
+        <div class="grid">
+            <div class="card"><h3>🎓 شهادات دولية</h3><p>معتمدة من Northwestern University و Google و Udacity في استراتيجيات المحتوى والسيو.</p></div>
+            <div class="card"><h3>🏛️ محتوى هندسي</h3><p>توظيف الدقة الهندسية في صياغة محتوى تقني متخصص للشركات الإنشائية والعقارية.</p></div>
+            <div class="card"><h3>🇦🇪 السوق الإماراتي</h3><p>خبرة واسعة في إدارة منصات السوشيال ميديا وبناء البراندات داخل دولة الإمارات.</p></div>
+        </div>
+    </div>
+</body>
+</html>
