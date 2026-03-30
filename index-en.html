@@ -3,189 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nesma Ahmed | Senior Content Strategist & B.Eng Civil Engineer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <title>Nesma Ahmed | Content Strategist & Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
         :root { --gold: #D4AF37; --bg: #050505; --card-bg: #0f0f0f; --text: #e0e0e0; }
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-        body { background: var(--bg); color: var(--text); font-family: 'Montserrat', sans-serif; overflow-x: hidden; }
-
-        /* Floating Social Sidebar */
-        .side-social { position: fixed; right: 20px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 20px; z-index: 1000; }
-        .side-social a { color: var(--gold); font-size: 1.5rem; transition: 0.3s; opacity: 0.6; }
-        .side-social a:hover { opacity: 1; transform: scale(1.2); }
-
+        body { background: var(--bg); color: var(--text); font-family: 'Montserrat', sans-serif; }
         nav { position: fixed; top: 0; width: 100%; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; z-index: 1000; background: rgba(5,5,5,0.8); backdrop-filter: blur(10px); }
         .logo { font-weight: 900; font-size: 1.5rem; color: var(--gold); letter-spacing: 2px; }
-        nav ul { display: flex; list-style: none; gap: 30px; }
-        nav a { color: #fff; text-decoration: none; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; transition: 0.3s; }
-        nav a:hover { color: var(--gold); }
-
-        /* Hero Section */
+        nav ul { display: flex; list-style: none; gap: 20px; }
+        nav a { color: #fff; text-decoration: none; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; }
         .hero { height: 100vh; display: flex; align-items: center; padding: 0 10%; background: radial-gradient(circle at 20% 20%, #1a1505 0%, #050505 100%); }
         .hero-content { max-width: 800px; text-align: center; margin: auto; }
-        .hero-content h2 { color: var(--gold); font-size: 1rem; margin-bottom: 15px; letter-spacing: 4px; text-transform: uppercase; font-weight: 300; }
-        .hero-content h1 { font-size: 4.5rem; line-height: 1; margin-bottom: 25px; font-weight: 900; color: #fff; }
+        .hero-profile-img { width: 150px; height: 150px; border-radius: 50%; border: 3px solid var(--gold); object-fit: cover; margin-bottom: 20px; }
+        .hero-content h1 { font-size: 3.5rem; font-weight: 900; }
         .gold-text { color: var(--gold); }
-        .hero-content p { font-size: 1.1rem; margin-bottom: 35px; color: #aaa; border-left: 3px solid var(--gold); padding-left: 20px; line-height: 1.8; text-align: left; }
-        .cta-btn { padding: 18px 45px; background: var(--gold); color: #000; text-decoration: none; font-weight: 900; border-radius: 5px; transition: 0.3s; display: inline-block; text-transform: uppercase; letter-spacing: 1px; }
-        .cta-btn:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(212,175,55,0.3); }
-
-        /* Profile Image in Hero */
-        .hero-profile-img { width: 160px; height: 160px; border-radius: 50%; border: 3px solid var(--gold); object-fit: cover; margin-bottom: 25px; box-shadow: 0 0 30px rgba(212,175,55,0.4); }
-
-        /* Statistics */
-        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; padding: 80px 10%; background: #0a0a0a; border-top: 1px solid #1a1a1a; }
-        .stat-item { text-align: center; }
-        .stat-item h3 { font-size: 3.5rem; color: var(--gold); margin-bottom: 5px; font-weight: 900; }
-        .stat-item p { font-size: 0.8rem; color: #666; text-transform: uppercase; letter-spacing: 2px; }
-
-        /* Brands Marquee */
-        .marquee { padding: 80px 0; background: #000; overflow: hidden; white-space: nowrap; border-top: 1px solid #111; }
-        .marquee-content { display: inline-block; animation: scroll 25s linear infinite; }
-        .marquee-content span { font-size: 1.8rem; font-weight: 900; color: #1a1a1a; margin: 0 60px; text-transform: uppercase; letter-spacing: 8px; }
-        @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-
-        /* Portfolio Section Updated */
-        .section-title { text-align: center; margin-bottom: 80px; }
-        .section-title h2 { font-size: 2.8rem; color: var(--gold); font-weight: 900; margin-bottom: 15px; }
-        .section-title div { width: 60px; height: 4px; background: var(--gold); margin: auto; }
-
-        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; padding: 0 10%; }
-        .work-card { background: var(--card-bg); border-radius: 20px; overflow: hidden; border: 1px solid #1a1a1a; transition: 0.5s; position: relative; }
-        .work-card:hover { border-color: var(--gold); transform: translateY(-10px); }
-        .work-img { height: 260px; background: #111; display: flex; align-items: center; justify-content: center; font-size: 4rem; color: #222; }
-        .work-info { padding: 35px; text-align: left; }
-        .work-info h3 { color: var(--gold); margin-bottom: 15px; font-size: 1.4rem; font-weight: 900; }
-        .work-info p { font-size: 0.95rem; color: #888; margin-bottom: 25px; line-height: 1.6; }
-        .work-link { color: var(--gold); text-decoration: none; font-weight: 900; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; display: flex; align-items: center; gap: 10px; }
-
-        /* Certifications Section */
-        .certs-section { padding: 120px 10%; background: #050505; }
-        .cert-card { display: flex; align-items: center; gap: 20px; padding: 25px; background: rgba(255,255,255,0.02); border-radius: 15px; margin-bottom: 20px; border: 1px solid transparent; transition: 0.3s; text-align: left; }
-        .cert-card:hover { border-color: rgba(212,175,55,0.3); background: rgba(212,175,55,0.05); }
-        .cert-icon { color: var(--gold); font-size: 2rem; }
-
-        footer { padding: 100px 10% 50px; text-align: center; border-top: 1px solid #111; }
-        .footer-social { display: flex; justify-content: center; gap: 40px; margin-bottom: 40px; }
-        .footer-social a { color: #444; font-size: 1.8rem; transition: 0.3s; }
-        .footer-social a:hover { color: var(--gold); }
-        footer p { color: #333; font-size: 0.8rem; letter-spacing: 3px; text-transform: uppercase; }
-
-        @media (max-width: 768px) {
-            .hero-content h1 { font-size: 2.8rem; }
-            .side-social { display: none; }
-            nav { padding: 20px; }
-            .portfolio-grid { padding: 0 5%; }
-        }
+        .cta-btn { padding: 15px 35px; background: var(--gold); color: #000; text-decoration: none; font-weight: 900; border-radius: 5px; }
+        .section-title { text-align: center; margin-bottom: 60px; padding-top: 100px; }
+        .section-title h2 { font-size: 2.5rem; color: var(--gold); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; padding: 0 10%; }
+        .card { background: var(--card-bg); padding: 30px; border-radius: 15px; border: 1px solid #1a1a1a; transition: 0.4s; text-decoration: none; color: inherit; display: block; }
+        .card:hover { border-color: var(--gold); transform: translateY(-10px); }
+        .card h3 { color: var(--gold); margin-bottom: 10px; }
+        .read-more { color: var(--gold); font-weight: bold; font-size: 0.8rem; text-transform: uppercase; }
     </style>
 </head>
 <body>
 
-    <div class="side-social">
-        <a href="https://wa.me/971505296937" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://www.linkedin.com/in/nesmaahmedseo/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:nesmaahmed0111@gmail.com"><i class="fas fa-envelope"></i></a>
-    </div>
-
     <nav>
-        <div class="logo">NESMA AHMED</div>
+        <div class="logo">NESMA.A</div>
         <ul>
-            <li><a href="#work">Case Studies</a></li>
-            <li><a href="#certs">Expertise</a></li>
-            <li><a href="index.html" style="border: 1px solid var(--gold); padding: 5px 15px; border-radius: 20px; color: var(--gold);">AR</a></li>
+            <li><a href="#work">Social Work</a></li>
+            <li><a href="#articles">Articles</a></li>
+            <li><a href="index.html" style="color:var(--gold)">AR</a></li>
         </ul>
     </nav>
 
     <section class="hero">
         <div class="hero-content" data-aos="fade-up">
             <img src="profile.jpeg" alt="Nesma Ahmed" class="hero-profile-img">
-            
-            <h2>Senior Content Strategist</h2>
-            <h1>ENGINEERING <span class="gold-text">RESULTS</span> THROUGH CONTENT.</h1>
-            <p>I bridge the gap between field-tested engineering precision and advanced digital marketing. I deliver specialized (Technical Content) that produces measurable results for companies across the UAE market.</p>
-            <a href="https://wa.me/971505296937" class="cta-btn">Book a Consultation</a>
+            <h1>NESMA <span class="gold-text">AHMED</span></h1>
+            <p>Engineering Results Through Content | SEO & Digital Specialist</p>
+            <br>
+            <a href="https://wa.me/971505296937" class="cta-btn">Contact Me</a>
         </div>
     </section>
 
-    <div class="stats" data-aos="fade-up">
-        <div class="stat-item"><h3>128%</h3><p>Reach Growth</p></div>
-        <div class="stat-item"><h3>+40%</h3><p>Organic Followers</p></div>
-        <div class="stat-item"><h3>96%</h3><p>Impression Spike</p></div>
-        <div class="stat-item"><h3>+4</h3><p>Years Experience</p></div>
-    </div>
-
-    <div class="marquee">
-        <div class="marquee-content">
-            <span>AL SHAM BUILD</span><span>HS PROJECTS</span><span>AL MUSTASHAR</span><span>FTMNT LEATHER</span><span>AL SHAM STONE</span>
-            <span>AL SHAM BUILD</span><span>HS PROJECTS</span><span>AL MUSTASHAR</span><span>FTMNT LEATHER</span><span>AL SHAM STONE</span>
+    <section id="articles">
+        <div class="section-title">
+            <h2>SEO Articles Portfolio</h2>
         </div>
-    </div>
-
-    <section id="work" style="padding: 120px 0;">
-        <div class="section-title" data-aos="fade-up">
-            <h2>Selected Works</h2>
-            <div></div>
-        </div>
-
-        <div class="portfolio-grid">
-            <div class="work-card" data-aos="fade-up">
-                <div class="work-img"><i class="fas fa-city"></i></div>
-                <div class="work-info">
-                    <h3>Al Sham Build Group</h3>
-                    <p>End-to-end social media management focusing on luxury engineering content and brand authority in the UAE construction sector.</p>
-                    <a href="https://www.facebook.com/alshambuild" target="_blank" class="work-link">View Case Study <i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-
-            <div class="work-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="work-img"><i class="fas fa-balance-scale"></i></div>
-                <div class="work-info">
-                    <h3>Al Mustashar Legal</h3>
-                    <p>Achieved 40% organic follower growth in just 2 months. Crafted an engaging legal content strategy.</p>
-                    <a href="https://www.facebook.com/almustasharuae" target="_blank" class="work-link">View Case Study <i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-
-            <div class="work-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="work-img"><i class="fas fa-chart-line"></i></div>
-                <div class="work-info">
-                    <h3>SEO Mastery</h3>
-                    <p>Ranked articles in Top Google results for Tech, Interior Design, and Automotive sectors.</p>
-                    <a href="https://mo7ayd.com/" target="_blank" class="work-link">Read Articles <i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
+        <div class="grid">
+            <a href="https://mo7ayd.com/%d8%b4%d8%b1%d8%a7%d9%83%d8%a9-apple-%d9%88-google-gemini" target="_blank" class="card" data-aos="fade-up">
+                <h3>Apple & Google Gemini</h3>
+                <p>The future of AI and Siri in 2026.</p>
+                <span class="read-more">Read Full Article <i class="fas fa-external-link-alt"></i></span>
+            </a>
+            <a href="https://mo7ayd.com/%d9%86%d8%b5%d8%a7%d8%a6%d8%ad-%d9%81%d9%8a-%d8%a7%d9%84%d8%aa%d8%b5%d9%85%d9%8a%d9%85-%d8%a7%d9%84%d8%af%d8%a7%d8%ae%d9%84%d9%8a-6-%d8%a3%d9%81%d9%83%d8%a7%d8%b1" target="_blank" class="card" data-aos="fade-up">
+                <h3>Interior Design Tips</h3>
+                <p>6 Engineering ideas for home decor.</p>
+                <span class="read-more">Read Full Article <i class="fas fa-external-link-alt"></i></span>
+            </a>
         </div>
     </section>
 
-    <section id="certs" class="certs-section">
-        <div class="section-title" data-aos="fade-up">
-            <h2>Global Certifications</h2>
-            <div></div>
-        </div>
-        <div style="max-width: 900px; margin: auto;">
-            <div class="cert-card" data-aos="fade-left"><i class="fas fa-award cert-icon"></i> <div><strong>Northwestern University:</strong> Content Strategy Specialization</div></div>
-            <div class="cert-card" data-aos="fade-left" data-aos-delay="100"><i class="fab fa-google cert-icon"></i> <div><strong>Google:</strong> Digital Marketing & E-Commerce Professional</div></div>
-            <div class="cert-card" data-aos="fade-left" data-aos-delay="200"><i class="fas fa-university cert-icon"></i> <div><strong>Udacity Nanodegree:</strong> Advanced Digital Marketing Nanodegree</div></div>
-            <div class="cert-card" data-aos="fade-left" data-aos-delay="300"><i class="fas fa-graduation-cap cert-icon">
-            </i> <div><strong>B.Eng Civil Engineering:</strong> Helwan University (Previous field experience as Site Engineer)</div></div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-social">
-            <a href="https://wa.me/971505296937"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://www.linkedin.com/in/nesmaahmedseo/"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:nesmaahmed0111@gmail.com"><i class="fas fa-envelope"></i></a>
-        </div>
-        <p>© 2026 NESMA AHMED | Sharjah, UAE</p>
+    <footer style="text-align: center; padding: 50px; opacity: 0.5;">
+        <p>© 2026 Nesma Ahmed | Sharjah</p>
     </footer>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 1000, once: true, offset: 120 });
-    </script>
+    <script>AOS.init();</script>
 </body>
 </html>
