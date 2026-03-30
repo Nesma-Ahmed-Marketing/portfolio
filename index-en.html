@@ -3,77 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nesma Ahmed | Content Strategist & Engineer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>Nesma Ahmed | Senior Content Strategist & Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
         :root { --gold: #D4AF37; --bg: #050505; --card-bg: #0f0f0f; --text: #e0e0e0; }
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-        body { background: var(--bg); color: var(--text); font-family: 'Montserrat', sans-serif; }
+        body { background: var(--bg); color: var(--text); font-family: 'Montserrat', sans-serif; overflow-x: hidden; }
+
+        .side-social { position: fixed; right: 20px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 20px; z-index: 1000; }
+        .side-social a { color: var(--gold); font-size: 1.5rem; transition: 0.3s; opacity: 0.6; }
+        .side-social a:hover { opacity: 1; transform: scale(1.2); }
+
         nav { position: fixed; top: 0; width: 100%; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; z-index: 1000; background: rgba(5,5,5,0.8); backdrop-filter: blur(10px); }
         .logo { font-weight: 900; font-size: 1.5rem; color: var(--gold); letter-spacing: 2px; }
-        nav ul { display: flex; list-style: none; gap: 20px; }
+        nav ul { display: flex; list-style: none; gap: 30px; }
         nav a { color: #fff; text-decoration: none; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; }
+
         .hero { height: 100vh; display: flex; align-items: center; padding: 0 10%; background: radial-gradient(circle at 20% 20%, #1a1505 0%, #050505 100%); }
         .hero-content { max-width: 800px; text-align: center; margin: auto; }
-        .hero-profile-img { width: 150px; height: 150px; border-radius: 50%; border: 3px solid var(--gold); object-fit: cover; margin-bottom: 20px; }
-        .hero-content h1 { font-size: 3.5rem; font-weight: 900; }
+        .hero-profile-img { width: 160px; height: 160px; border-radius: 50%; border: 3px solid var(--gold); object-fit: cover; margin-bottom: 25px; }
+        .hero-content h1 { font-size: 4.5rem; font-weight: 900; color: #fff; }
         .gold-text { color: var(--gold); }
-        .cta-btn { padding: 15px 35px; background: var(--gold); color: #000; text-decoration: none; font-weight: 900; border-radius: 5px; }
-        .section-title { text-align: center; margin-bottom: 60px; padding-top: 100px; }
-        .section-title h2 { font-size: 2.5rem; color: var(--gold); }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; padding: 0 10%; }
-        .card { background: var(--card-bg); padding: 30px; border-radius: 15px; border: 1px solid #1a1a1a; transition: 0.4s; text-decoration: none; color: inherit; display: block; }
-        .card:hover { border-color: var(--gold); transform: translateY(-10px); }
-        .card h3 { color: var(--gold); margin-bottom: 10px; }
-        .read-more { color: var(--gold); font-weight: bold; font-size: 0.8rem; text-transform: uppercase; }
+        .hero-content p { border-left: 3px solid var(--gold); padding-left: 20px; text-align: left; line-height: 1.8; color: #aaa; }
+        .cta-btn { padding: 18px 45px; background: var(--gold); color: #000; text-decoration: none; font-weight: 900; border-radius: 5px; }
+
+        .section-title { text-align: center; margin-bottom: 80px; padding-top: 100px; }
+        .section-title h2 { font-size: 2.8rem; color: var(--gold); font-weight: 900; }
+        .section-title div { width: 60px; height: 4px; background: var(--gold); margin: auto; }
+
+        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; padding: 0 10%; }
+        .work-card { background: var(--card-bg); border-radius: 20px; padding: 30px; border: 1px solid #1a1a1a; text-decoration: none; color: inherit; transition: 0.4s; display: block; }
+        .work-card:hover { border-color: var(--gold); transform: translateY(-10px); }
+        .work-card h3 { color: var(--gold); margin-bottom: 10px; }
+        .work-link { color: var(--gold); font-weight: bold; font-size: 0.8rem; text-transform: uppercase; }
+
+        @media (max-width: 768px) { .hero-content h1 { font-size: 2.8rem; } .side-social { display: none; } }
     </style>
 </head>
 <body>
 
+    <div class="side-social">
+        <a href="https://wa.me/971505296937" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.linkedin.com/in/nesmaahmedseo/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+
     <nav>
-        <div class="logo">NESMA.A</div>
+        <div class="logo">NESMA AHMED</div>
         <ul>
-            <li><a href="#work">Social Work</a></li>
+            <li><a href="#work">Case Studies</a></li>
             <li><a href="#articles">Articles</a></li>
-            <li><a href="index.html" style="color:var(--gold)">AR</a></li>
+            <li><a href="index.html" style="color: var(--gold);">AR</a></li>
         </ul>
     </nav>
 
     <section class="hero">
         <div class="hero-content" data-aos="fade-up">
             <img src="profile.jpeg" alt="Nesma Ahmed" class="hero-profile-img">
-            <h1>NESMA <span class="gold-text">AHMED</span></h1>
-            <p>Engineering Results Through Content | SEO & Digital Specialist</p>
+            <h1>ENGINEERING <span class="gold-text">RESULTS</span>.</h1>
+            <p>I bridge the gap between field-tested engineering precision and advanced digital marketing. Delivering specialized content for the UAE market.</p>
             <br>
-            <a href="https://wa.me/971505296937" class="cta-btn">Contact Me</a>
+            <a href="https://wa.me/971505296937" class="cta-btn">Book Consultation</a>
         </div>
     </section>
 
-    <section id="articles">
-        <div class="section-title">
-            <h2>SEO Articles Portfolio</h2>
+    <section id="work">
+        <div class="section-title" data-aos="fade-up"><h2>Social Media</h2><div></div></div>
+        <div class="portfolio-grid">
+            <a href="https://www.facebook.com/alshambuild" target="_blank" class="work-card">
+                <h3>Al Sham Build Group</h3>
+                <p>Social media management for luxury construction & engineering.</p>
+                <span class="work-link">View Project <i class="fas fa-external-link-alt"></i></span>
+            </a>
         </div>
-        <div class="grid">
-            <a href="https://mo7ayd.com/%d8%b4%d8%b1%d8%a7%d9%83%d8%a9-apple-%d9%88-google-gemini" target="_blank" class="card" data-aos="fade-up">
+    </section>
+
+    <section id="articles" style="background: #080808; padding-bottom: 100px;">
+        <div class="section-title" data-aos="fade-up"><h2>SEO Articles</h2><div></div></div>
+        <div class="portfolio-grid">
+            <a href="https://mo7ayd.com/%d8%b4%d8%b1%d8%a7%d9%83%d8%a9-apple-%d9%88-google-gemini" target="_blank" class="work-card">
                 <h3>Apple & Google Gemini</h3>
-                <p>The future of AI and Siri in 2026.</p>
-                <span class="read-more">Read Full Article <i class="fas fa-external-link-alt"></i></span>
+                <p>AI future and Siri analysis for 2026.</p>
+                <span class="work-link">Read Full Article <i class="fas fa-external-link-alt"></i></span>
             </a>
-            <a href="https://mo7ayd.com/%d9%86%d8%b5%d8%a7%d8%a6%d8%ad-%d9%81%d9%8a-%d8%a7%d9%84%d8%aa%d8%b5%d9%85%d9%8a%d9%85-%d8%a7%d9%84%d8%af%d8%a7%d8%ae%d9%84%d9%8a-6-%d8%a3%d9%81%d9%83%d8%a7%d8%b1" target="_blank" class="card" data-aos="fade-up">
-                <h3>Interior Design Tips</h3>
-                <p>6 Engineering ideas for home decor.</p>
-                <span class="read-more">Read Full Article <i class="fas fa-external-link-alt"></i></span>
+            <a href="https://mo7ayd.com/%d9%86%d9%8a%d8%b3%d8%a7%d9%86-%d8%b1%d9%88%d9%83%d8%b3-2026" target="_blank" class="work-card">
+                <h3>Nissan Roox 2026</h3>
+                <p>Comprehensive review of the new Nissan car and its AI features.</p>
+                <span class="work-link">Read Full Article <i class="fas fa-external-link-alt"></i></span>
             </a>
         </div>
     </section>
-
-    <footer style="text-align: center; padding: 50px; opacity: 0.5;">
-        <p>© 2026 Nesma Ahmed | Sharjah</p>
-    </footer>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>AOS.init();</script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
 </body>
 </html>
